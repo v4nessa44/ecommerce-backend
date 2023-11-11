@@ -38,7 +38,7 @@ router.put('/:id', (req, res) => {
       id: req.params.id
     }
   })
-    .then(tags => res.json(tags))
+    .then(tags => res.json('Successfully Updated!'))
     .catch(err => res.json(err))
 });
 

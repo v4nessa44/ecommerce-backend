@@ -9,19 +9,6 @@ router.get('/', (req, res) => {
   Category.findAll()
   .then(categories => res.json(categories))
   .catch(err => res.json(err))
-// try{
-//   const allCates = await Category.findAll({
-//     include: [
-//       {
-//         model: 'product'
-//       }
-//     ]
-//   })
-//   res.status(200).json(allCates)
-// }
-// catch(err){
-//   res.status(400).json(err)
-// }
 });
 
 router.get('/:id',  (req, res) => {
@@ -50,7 +37,7 @@ router.put('/:id', (req, res) => {
       id: req.params.id
     }
   })
-  .then(categories => res.json(categories))
+  .then(categories => res.json('Successfully Updated!'))
   .catch(err => res.json(err))
 });
 
